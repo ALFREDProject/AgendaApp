@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NavigationApp</string>
+    <string name="app_name">AgendaApp</string>
 
     <string name="hello_world">Hello</string>
     <string name="action_settings">Settings</string>

@@ -1,4 +1,4 @@
-package eu.alfred.navigationapp;
+package eu.alfred.agendaapp;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(eu.alfred.navigationapp.R.layout.activity_main);
+        setContentView(eu.alfred.agendaapp.R.layout.activity_main);
 
         cloudStorage = null;
         safFacade = null;
@@ -72,7 +72,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(eu.alfred.navigationapp.R.menu.menu_main, menu);
+        getMenuInflater().inflate(eu.alfred.agendaapp.R.menu.menu_main, menu);
         return true;
     }
 
@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == eu.alfred.navigationapp.R.id.action_settings) {
+        if (id == eu.alfred.agendaapp.R.id.action_settings) {
             return true;
         }
 
@@ -92,7 +92,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void onBtnSaveClick(View view) {
-        EditText nameText = (EditText)this.findViewById(eu.alfred.navigationapp.R.id.nameText);
+        EditText nameText = (EditText)this.findViewById(eu.alfred.agendaapp.R.id.nameText);
         saveText(nameText.getText().toString());
     }
 
@@ -241,7 +241,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void setText(String text){
 
-        TextView nameText = (TextView) this.findViewById(eu.alfred.navigationapp.R.id.resultLabel);
+        TextView nameText = (TextView) this.findViewById(eu.alfred.agendaapp.R.id.resultLabel);
         nameText.setText(text);
     }
 
@@ -267,11 +267,11 @@ public class MainActivity extends ActionBarActivity {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
 
         // Define the notification settings.
-        builder.setSmallIcon(eu.alfred.navigationapp.R.drawable.ic_launcher)
+        builder.setSmallIcon(eu.alfred.agendaapp.R.drawable.ic_launcher)
                 // In a real app, you may want to use a library like Volley
                 // to decode the Bitmap.
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(),
-                        eu.alfred.navigationapp.R.drawable.ic_launcher))
+                        eu.alfred.agendaapp.R.drawable.ic_launcher))
                 .setColor(Color.BLUE)
                 .setContentTitle(notificationDetails)
                 .setContentText("Notification")
