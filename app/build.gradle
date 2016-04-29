@@ -8,8 +8,8 @@ android {
         applicationId "eu.alfred.agendaapp"
         minSdkVersion 19
         targetSdkVersion 21
-        versionCode 5
-        versionName "5.0"
+        versionCode 6
+        versionName "6.0"
     }
     buildTypes {
         release {
