@@ -10,6 +10,7 @@ import java.util.Map;
 import eu.alfred.agendaapp.actions.SetAgendaAction;
 import eu.alfred.api.proxies.interfaces.ICadeCommand;
 import eu.alfred.ui.AppActivity;
+import eu.alfred.ui.BackToPAButton;
 import eu.alfred.ui.CircleButton;
 
 public class MainActivity extends AppActivity implements ICadeCommand {
@@ -25,7 +26,11 @@ public class MainActivity extends AppActivity implements ICadeCommand {
         setContentView(R.layout.activity_main);
 
         circleButton = (CircleButton) findViewById(R.id.voiceControlBtn);
-        circleButton.setOnTouchListener(new CircleTouchListener());
+        circleButton.setOnTouchListener(new MicrophoneTouchListener());
+
+        backToPAButton = (BackToPAButton) findViewById(R.id.backControlBtn);
+        backToPAButton.setOnTouchListener(new BackTouchListener());
+
     }
 
     @Override
