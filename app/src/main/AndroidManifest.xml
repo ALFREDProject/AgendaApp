@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.alfred.agendaapp" 
-    android:versionCode="9"
-    android:versionName="9.0" >
+    package="eu.alfred.agendaapp">
 
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
